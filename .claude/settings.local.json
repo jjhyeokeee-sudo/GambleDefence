@@ -1,0 +1,51 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(update-config)",
+      "Bash(python *)",
+      "Bash(claude mcp *)",
+      "Bash(curl -s -N -H \"Accept: text/event-stream\" --max-time 5 http://localhost:8090/sse)",
+      "Bash(curl -s -N -H \"Accept: text/event-stream\" --max-time 5 \"http://localhost:8090/mcp\")",
+      "Bash(curl -v -X GET -H \"Accept: text/event-stream\" --max-time 5 http://127.0.0.1:8090/mcp)",
+      "Bash(claude --debug -p \"hello\")",
+      "Bash(claude --debug -p \"hi\")",
+      "Read(//tmp/**)",
+      "Bash(curl -v -s -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" --max-time 5 http://127.0.0.1:8090/mcp -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"initialize\",\"params\":{\"protocolVersion\":\"2024-11-05\",\"capabilities\":{},\"clientInfo\":{\"name\":\"test\",\"version\":\"1.0\"}}}')",
+      "Bash(curl -s -X POST -H \"Content-Type: application/json\" -H \"Accept: application/json, text/event-stream\" http://127.0.0.1:8090/mcp -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"initialize\",\"params\":{\"protocolVersion\":\"2024-11-05\",\"capabilities\":{},\"clientInfo\":{\"name\":\"test\",\"version\":\"1.0\"}}}' -D -)",
+      "Bash(awk '{print $2}')",
+      "WebFetch(domain:github.com)",
+      "Bash(uvx --version)",
+      "Bash(uv --version)",
+      "Bash(uvx --from mcpforunityserver mcp-for-unity --help)",
+      "Bash(uvx --from mcpforunityserver mcp-for-unity --transport stdio)",
+      "mcp__UnityMCP__manage_scene",
+      "mcp__UnityMCP__manage_asset",
+      "mcp__UnityMCP__manage_script",
+      "mcp__UnityMCP__read_console",
+      "mcp__UnityMCP__refresh_unity",
+      "mcp__UnityMCP__manage_gameobject",
+      "mcp__UnityMCP__batch_execute",
+      "mcp__UnityMCP__manage_components",
+      "Bash(curl -s http://127.0.0.1:8090)",
+      "Bash(curl *)",
+      "Bash(uvx --from mcpforunityserver mcp-for-unity --transport http --http-port 8091)",
+      "Read(//c/Users/wnstk/**)",
+      "Read(//c/Users/wnstk/AppData/Local/**)",
+      "Read(//c/Users/wnstk/AppData/Roaming/**)",
+      "Bash(powershell -Command \"netstat -an | Select-String '640[0-9]|8090'\")",
+      "Bash(python3 *)",
+      "mcp__UnityMCP__manage_scriptable_object",
+      "mcp__UnityMCP__find_gameobjects",
+      "mcp__UnityMCP__execute_code",
+      "mcp__UnityMCP__manage_editor",
+      "mcp__UnityMCP__manage_camera",
+      "mcp__UnityMCP__create_script",
+      "mcp__UnityMCP__manage_build",
+      "mcp__UnityMCP__validate_script"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "unity"
+  ]
+}
